@@ -13,7 +13,7 @@ building complex givens which require a bunch of models collaborating
 
 <b>Gemcutter</b> for the gem: http://gemcutter.org/gems/pickle
 
-<b>API</b> docs: http://ianwhite.github.com/pickle/doc
+<b>API</b> docs: {Pickle rdoc on github}[http://ianwhite.github.com/pickle/doc/]
 
 <b>Google group</b> for questions: http://groups.google.com/group/pickle-cucumber
 
@@ -43,13 +43,29 @@ Install pickle either as a rails plugin, or a gem
 
 It's tested against all stable branches of 2.x rails, and edge, with the latest versions of rspec, cucumber, factory_girl, machinist.
 
+== Run the tests
+
+You can run the test with <b>garlic</b> http://github.com/ianwhite/garlic, which tests against different versions of rails.
+  
+Or, you can make a test rails app:
+
+  cd ~/wherever_you_work
+  rails pickle_test_project; cd pickle_test_project
+  script/generate rspec
+  script/generate cucumber --rspec
+  script/plugin install git://github.com/ianwhite/pickle.git
+  cd vendor/plugins/pickle
+  rake spec
+  cucumber features
+
 == Contributors
 
 The following people have made Pickle better:
 
 * {Nick Rutherford}[http://github.com/nruth]
-* Tobi Knaup
+* {Tobi Knaup}[http://github.com/guenter]
 * {Michael MacDonald}[http://github.com/schlick]
+* {Michael Moen}[http://github.com/UnderpantsGnome]
 
 == Get Started
 
